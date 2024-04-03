@@ -39,7 +39,7 @@ contract MyNft is ERC721URIStorage {
         emit RoleAdded(_address, _role, isApproved);
     }   
 
-    //将合约中的所有ETH转给调用者，调用者必须是合约的拥有者
+    //将合约中的所有ETH转给调用者，调用者必须拥有权限
     function withdraw public{
         require(hasRole[msg.sender]["withdraw"], "You are not the owner");
         //transfer gass上限为2300，会主动抛出异常
