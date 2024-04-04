@@ -4,7 +4,7 @@ pragma solidity ^0.8.20;
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 
-abstract contract NFTSwap is IERC721Receiver {
+contract NFTSwap is IERC721Receiver {
 
     struct Order {
         address owner;
